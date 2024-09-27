@@ -20,6 +20,7 @@ connectToDatabase().then(() => {
 app.use(express.json()); // Middleware for parsing JSON bodies
 
 // Route files
+
 // Gift API Task 1: Import the giftRoutes and store in a constant called giftRoutes
 const giftRoutes = require('./routes/giftRoutes'); // Importing gift routes
 
@@ -32,6 +33,7 @@ const logger = require('./logger');
 app.use(pinoHttp({ logger })); // Middleware for logging HTTP requests
 
 // Use Routes
+
 // Gift API Task 2: Add the giftRoutes to the server by using the app.use() method
 app.use('/api/gifts', giftRoutes); // Attaching gift routes to /api/gifts
 
